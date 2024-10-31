@@ -1,0 +1,9 @@
+<div>
+    <h2>{{plate().title}}</h2>
+    <img [src]="place().picture" alt="">
+    <p>{{plate().description}}</p>
+    <div>
+        <h3>{{plate().price * currencyInfo().exchangeRate | currency: currencyInfo().currency}}</h3>
+        <button>{{buttonText()}}</button>
+    </div>
+</div>

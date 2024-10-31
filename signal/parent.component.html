@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        @for(plate of plates$ | async; track plate._id) {
+            <app-licence-plate
+                buttonText="Add to cart" [plate]="plate" class="col-4"
+                [currencyInfo]="currencyInfo()"
+            ></app-licence-plate>
+        }
+    </div>
+</div>
+
+<!-- 
+storeviewcomponent.ts
+export class StoreViewComponent {
+    http = inject(HttpClient);
+    plates$ = this.http.get<LicencePlate[]>("....url");
+    currencyInfo =  inject(CurrencyService).getCurrencyinfo();
+    
+}
+
+-->
