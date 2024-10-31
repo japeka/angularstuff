@@ -1,7 +1,7 @@
 //...imports
 import { CurrencyService } from "./CurrencyService";
 
-@CompositionEvent({
+@Composition({
     selector: '',
     standalone: true,
     templateUrl: './currency.component.html',
